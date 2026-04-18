@@ -1,5 +1,0 @@
-../Drivers/BSP/TIME/app_beijing_time.c:14:16:is_leap_year	16	static
-../Drivers/BSP/TIME/app_beijing_time.c:19:16:days_in_month	24	static
-../Drivers/BSP/TIME/app_beijing_time.c:34:6:APP_Time_InitDefault	4	static
-../Drivers/BSP/TIME/app_beijing_time.c:44:6:APP_Time_Tick1s	16	static
-../Drivers/BSP/TIME/app_beijing_time.c:74:6:APP_Time_GetString	48	static

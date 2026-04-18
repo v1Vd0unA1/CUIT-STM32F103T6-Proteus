@@ -1,4 +1,0 @@
-../Drivers/BSP/APP/app_task.c:15:13:format_fixed	64	static
-../Drivers/BSP/APP/app_task.c:49:6:APP_UserInit	16	static
-../Drivers/BSP/APP/app_task.c:69:6:APP_Timer1sISR	8	static
-../Drivers/BSP/APP/app_task.c:74:6:APP_Task1s	144	static

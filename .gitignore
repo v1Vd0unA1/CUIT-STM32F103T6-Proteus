@@ -1,0 +1,25 @@
+# STM32CubeIDE build output
+Debug/
+Release/
+
+# Compiled / generated artifacts
+*.o
+*.d
+*.su
+*.cyclo
+*.elf
+*.hex
+*.bin
+*.map
+*.list
+*.asm
+
+# Generated build helper files
+objects.list
+objects.mk
+sources.mk
+subdir.mk
+makefile
+
+# Local temporary staging folder
+__github_repo_staging/
