@@ -95,7 +95,7 @@ int main(void)
   MX_TIM2_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  const char msg1[] = "UART1_OK\r\n";
+  const char msg1[] = "pH Meter Ready\r\n";
   HAL_UART_Transmit(&huart1, (uint8_t *)msg1, sizeof(msg1) - 1, 100);
   APP_UserInit();
   HAL_TIM_Base_Start_IT(&htim2);

@@ -8,7 +8,8 @@ static PH_Calib_t g_ph_cal =
     .v918 = 1.670f
 };
 
-static float g_iir_voltage = 2.000f;
+static float g_iir_voltage = 0.0f;
+static uint8_t g_iir_initialized = 0;
 
 void PH_Init(void)
 {
@@ -31,7 +32,7 @@ static float PH_ReadVoltageOnce(void)
 
 float PH_ReadVoltage(void)
 {
-    const uint8_t N = 16;
+    const uint8_t N = 8;
     float buf[N];
     float sum = 0.0f;
     float vmax = -1000.0f;
@@ -40,7 +41,7 @@ float PH_ReadVoltage(void)
     for (uint8_t i = 0; i < N; i++)
     {
         buf[i] = PH_ReadVoltageOnce();
-        HAL_Delay(2);
+        HAL_Delay(1);
     }
 
     for (uint8_t i = 0; i < N; i++)
@@ -51,7 +52,16 @@ float PH_ReadVoltage(void)
     }
 
     float avg = (sum - vmax - vmin) / (N - 2);
-    g_iir_voltage = 0.7f * g_iir_voltage + 0.3f * avg;
+
+    if (!g_iir_initialized)
+    {
+        g_iir_voltage = avg;
+        g_iir_initialized = 1;
+    }
+    else
+    {
+        g_iir_voltage = 0.3f * g_iir_voltage + 0.7f * avg;
+    }
 
     return g_iir_voltage;
 }
