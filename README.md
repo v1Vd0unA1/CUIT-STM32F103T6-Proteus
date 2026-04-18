@@ -1,3 +1,3 @@
-#CUIT传感器与数据采集结题项目Proteus仿真
+# CUIT传感器与数据采集结题项目Proteus仿真
 STM32CubeIDE选择芯片为STM32F103T6U6A，Proteus选择芯片为STMF103T6
 本设计包含pH值测量模块、OLED显示模块、DS18B20测温模块
