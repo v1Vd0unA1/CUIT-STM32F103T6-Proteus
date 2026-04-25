@@ -6,7 +6,6 @@
 #include "atk_md0096.h"
 #include "adc.h"
 #include <stdio.h>
-#include <string.h>
 
 static float g_last_temp = 0.0f;
 static uint8_t g_temp_valid = 0;

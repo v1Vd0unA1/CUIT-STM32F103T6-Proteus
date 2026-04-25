@@ -114,12 +114,13 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-      if (g_task_1s_flag)
-      {
-          g_task_1s_flag = 0;
-          APP_Task1s();
-      }
+
     /* USER CODE BEGIN 3 */
+    if (g_task_1s_flag)
+    {
+      g_task_1s_flag = 0;
+      APP_Task1s();
+    }
   }
   /* USER CODE END 3 */
 }

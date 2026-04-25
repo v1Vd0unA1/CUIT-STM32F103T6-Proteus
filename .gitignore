@@ -23,3 +23,9 @@ makefile
 
 # Local temporary staging folder
 __github_repo_staging/
+
+# Local scratch and generated report output
+.tmp_*/
+.tmp_*.zip
+tmp/
+output/
